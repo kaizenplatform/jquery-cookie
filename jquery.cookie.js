@@ -16,6 +16,8 @@
 }(function ($) {
 
 	var pluses = /\+/g;
+	var pbcd = window.pbcd || {};
+	var decodeURIComponent = (pbcd.encodings || window).decodeURIComponent;
 
 	function encode(s) {
 		return config.raw ? s : encodeURIComponent(s);
